@@ -1,0 +1,7 @@
+@(regions: io.vavr.collection.Seq[String])
+
+<ul>
+    @for(region <- regions.toJavaList()) {
+        <li><a href="@routes.HomeController.wines(region)">@region</a></li>
+    }
+</ul>

@@ -1,0 +1,7 @@
+@(wines: io.vavr.collection.Seq[models.Wine])
+
+<ul>
+    @for(wine <- wines.toJavaList()) {
+        <li><a href="@routes.HomeController.wine(wine.getId())">@(wine.getName())</a></li>
+    }
+</ul>
